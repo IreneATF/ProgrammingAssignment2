@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## PROGRAMMING ASSIGNMENT 2 - R PROGRAMMING
+## Irene T - June 24th 2023
+## This pair of functions can cache the inverse of a matrix
 
-## Write a short comment describing this function
+## This first function creates a matrix object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
       if(ncol(x)==nrow(x) && det(x)!=0){
@@ -18,7 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
       }else{return(message("The matrix is not invertible."))}
 }
 
-## Write a short comment describing this function
+## This second function computes the inverse of the previous matrix, 
+## or retrieves the inverse from the cache if it has been previously calculated. 
 
 cacheSolve <- function(x, ...) {
        ## Return a matrix that is the inverse of 'x'
@@ -34,23 +36,24 @@ cacheSolve <- function(x, ...) {
        
 }
 
-setwd("C:/Users/irene/Documents/Lifelong learning/Learning R/R Learning Coursera/Coursera_Rprog_ass2/ProgrammingAssignment2")
-source("cachematrix.R")
+# setwd("C:/Users/irene/Documents/Lifelong learning/Learning R/R Learning Coursera/Coursera_Rprog_ass2/ProgrammingAssignment2")
+# source("cachematrix.R")
 
 ## Testing the function with StackOverflow example
-x <-makeCacheMatrix(matrix(c(1,0,0,0,1,0,0,0,2),ncol=3,nrow=3))
-cacheSolve(x)
+## x <-makeCacheMatrix(matrix(c(1,0,0,0,1,0,0,0,2),ncol=3,nrow=3))
+## cacheSolve(x)
       #[,1] [,2] [,3]
 #[1,]    1    0  0.0
 #[2,]    0    1  0.0
 #[3,]    0    0  0.5
-x$get()
+## x$get()
       #[,1] [,2] [,3]
 #[1,]    1    0    0
 #[2,]    0    1    0
 #[3,]    0    0    2
-x$getinverse()
+## x$getinverse()
       #[,1] [,2] [,3]
 #[1,]    1    0  0.0
 #[2,]    0    1  0.0
 #[3,]    0    0  0.5
+
